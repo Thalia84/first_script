@@ -1,0 +1,80 @@
+#!/bin/bash
+
+     # Author : Nathalie
+     # Date : july 27,2024
+
+
+# Ask users for their age
+echo "How old are you?"
+
+#Read the user's input"
+read  age
+
+# Check if the input is valid
+
+if [[ "$age" =~ ^[0-9]+$ ]]; 
+then
+	echo "You are $age years old"
+else
+	echo "Please enter a valid integer number"
+	exit 40
+
+fi
+
+
+
+#Ask user his/her name
+echo "What's your first name?"
+read first_name
+
+echo "Please enter your last name as well"
+read last_name
+
+#Check if the input is valid
+
+if [[ "$first_name" =~ ^[a-zA-Z]+$ && "$last_name" =~ ^[a-zA-Z]+$ ]];
+then
+	echo "Your name is $first_name $last_name"
+else
+	echo "Please enter a valid input"
+	exit 16
+fi
+
+
+
+#Ask user city
+echo "What's your city?"
+
+#Read the user input into variable
+read city
+
+#Check the user input
+if [[ "$city" =~ ^[a-zA-Z]+$ ]]
+then
+echo "You live in $city"
+else
+	echo "Enter a valit input"
+	exit 15
+
+fi
+
+
+
+#Ask user their profession
+echo "What is your profession?"
+
+#Read user input into variable
+read profession
+
+#Check user input
+if [[ "$profession" =~ ^[a-zA-Z]+$ ]]
+then
+      echo "My profession is $profession"
+else
+	echo "Please enter a valid input"
+	exit 12
+
+fi
+
+
+
